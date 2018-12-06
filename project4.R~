@@ -1,0 +1,17 @@
+#Define variables
+v=seq(30,120,by=0.1)
+W=7117.155
+rho=1.225
+S=9.02
+AR=6.1038
+e=0.77
+c=8.29e-7
+eta=0.8
+
+#PR calculations
+CL=W/(0.5*rho*v^2*S)
+CD=0.0123+(CL^2/(pi*AR*e))
+CDCL=CD/CL
+PR=W*CDCL*v
+
+print(PR)
